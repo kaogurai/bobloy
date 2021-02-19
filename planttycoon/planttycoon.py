@@ -357,7 +357,7 @@ class PlantTycoon(commands.Cog):
             ``{0}shovel``: Shovel your plant out.\n
             ``{0}water``: Water your plant.\n
             ``{0}fertilize``: Fertilize the soil.\n
-            ``{0}prune``: Prune your plant.\n"""
+            ``{0}trim``: Trim your plant.\n"""
 
             em = discord.Embed(
                 title=title,
@@ -707,9 +707,9 @@ class PlantTycoon(commands.Cog):
         else:
             await self._add_health(channel, gardener, product, product_category)
 
-    @commands.command(name="prune")
-    async def _prune(self, ctx):
-        """Prune your plant."""
+    @commands.command(name="trim")
+    async def _trim(self, ctx):
+        """Trim your plant."""
         gardener = await self._gardener(ctx.author)
         try:
             await self._apply_degradation(gardener)
