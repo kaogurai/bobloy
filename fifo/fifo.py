@@ -18,7 +18,7 @@ from .datetime_cron_converters import CronConverter, DatetimeConverter, Timezone
 from .task import Task
 
 schedule_log = logging.getLogger("red.fox_v3.fifo.scheduler")
-schedule_log.setLevel(logging.DEBUG)
+schedule_log.setLevel(logging.INFO)
 
 log = logging.getLogger("red.fox_v3.fifo")
 
