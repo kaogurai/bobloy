@@ -22,9 +22,11 @@ class LoveCalculator(Cog):
 
     @commands.command(aliases=["lovecalc"])
     async def lovecalculator(
-        self, ctx: commands.Context, lover: discord.Member, loved: discord.Member
+        self, ctx: commands.Context, lover: discord.Member, loved: discord.Member=None
     ):
         """Calculate the love percentage!"""
+        if loved is None:
+            loved = ctx.author
 
         x = lover.display_name
         y = loved.display_name
