@@ -21,6 +21,7 @@ class LoveCalculator(Cog):
         return
 
     @commands.command(aliases=["lovecalc"])
+    @commands.guild_only()
     async def lovecalculator(
         self, ctx: commands.Context, lover: discord.Member, loved: discord.Member=None
     ):
