@@ -43,7 +43,7 @@ class FirstMessage(commands.Cog):
             await ctx.maybe_send_embed("Unable to read message history for that channel")
             return
 
-        em = discord.Embed(description=f"[First Message in {channel.name}]({message.jump_url})")
+        em = discord.Embed(description=f"[First Message in {channel}]({message.jump_url})")
         em.set_author(name=message.author.display_name, icon_url=message.author.avatar_url)
 
         await ctx.send(embed=em)
